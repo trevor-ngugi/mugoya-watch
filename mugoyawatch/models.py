@@ -32,7 +32,7 @@ class Profile(models.Model):
 
 class Business(models.Model):
     business_name = models.CharField(max_length =30)
-    business_descrpition = models.TextField()
+    business_descrpition = models.TextField()#spellin error
     user = models.ForeignKey(Profile)
     neighborhood = models.ForeignKey(Neighbourhood)
     business_email = models.EmailField()
