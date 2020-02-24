@@ -4,5 +4,9 @@
 {{block.super}}
 
 <h1>home page for mugoya watch</h1>
+{%for post in posts%}
+    <h2>{{post.message}}</h2>
+    <h2>{{post.pub_date}}</h2>
+{%endfor%}
 {% endblock %}
 
