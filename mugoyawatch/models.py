@@ -22,6 +22,7 @@ class Profile(models.Model):
     bio = models.TextField()
     email = models.EmailField()
     contact =  models.IntegerField(default=0)
+    #profile_image = models.ImageField(upload_to = 'profiles/')
 
     def __str__(self):
         return self.username
@@ -48,8 +49,7 @@ class Business(models.Model):
 class Posts(models.Model):
     message=models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
-    #project_image
-    #project_image = models.ImageField(upload_to = 'project/')
+    #message_image = models.ImageField(upload_to = 'posts/')
     #name=models.ForeignKey(User,on_delete=models.CASCADE)
 
     @classmethod
