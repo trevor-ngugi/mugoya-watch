@@ -37,5 +37,15 @@ class Business(models.Model):
     def __str__(self):
         return self.business_name
 
+class Posts(models.Model):
+    message=models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True)
+    #project_image
+    #project_image = models.ImageField(upload_to = 'project/')
+    #name=models.ForeignKey(User,on_delete=models.CASCADE)
+    
+
+    
+
 
 
