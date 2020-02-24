@@ -26,6 +26,9 @@ class Profile(models.Model):
     def __str__(self):
         return self.username
 
+    def save_profile(self):
+        self.save()
+
 
 class Business(models.Model):
     business_name = models.CharField(max_length =30)
@@ -37,12 +40,22 @@ class Business(models.Model):
     def __str__(self):
         return self.business_name
 
+    @classmethod
+    def search_business(cls,search_term):
+        business = cls.objects.filter(business_name__icontains=search_term)
+        return business
+
 class Posts(models.Model):
     message=models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
     #project_image
     #project_image = models.ImageField(upload_to = 'project/')
     #name=models.ForeignKey(User,on_delete=models.CASCADE)
+
+    @classmethod
+    def show_posts(cls):
+        posts= cls.objects.order_by('-pub_date')
+        return posts
     
 
     
