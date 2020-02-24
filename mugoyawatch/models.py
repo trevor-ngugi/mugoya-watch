@@ -10,7 +10,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length =30)
     username = models.CharField(max_length =30)
     identification_card =  models.IntegerField(default=0)
-    neighbourood = models.CharField(max_length =30)#foreign key
+    neighborhood = models.CharField(max_length =30)#foreign key
     bio = models.TextField()
     email = models.EmailField()
     contact =  models.IntegerField(default=0)
@@ -20,12 +20,12 @@ class Business(models.Model):
     business_name = models.CharField(max_length =30)
     business_descrpition = models.TextField()
     user = models.CharField(max_length =30)#foreign key
-    neighbourood = models.CharField(max_length =30)#foreign key
+    neighborhood = models.CharField(max_length =30)#foreign key
     business_email = models.EmailField()
 
 
-class Neighbourood(models.Model):
-    neighnourhood_name = models.CharField(max_length =30)
+class Neighbourhood(models.Model):
+    neighborhood_name = models.CharField(max_length =30)
     location = models.CharField(max_length =30)
     house_number =  models.IntegerField(default=0)
     #admin foreging key
