@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mugoyawatch.apps.MugoyawatchConfig'
+    'mugoyawatch.apps.MugoyawatchConfig',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
