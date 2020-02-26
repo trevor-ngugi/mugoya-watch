@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http  import HttpResponse
 from .models import Profile,Neighbourhood,Posts,Business
 from django.contrib.auth.decorators import login_required
+from .forms import NewMessageForm
 
 # Create your views here.
 
@@ -25,3 +26,19 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'hood/search.html',{"message":message})
+
+
+@login_required(login_url='/accounts/login/')
+def new_message(request):
+    current_user = request.user
+    if request.method == 'POST':
+        form = NewMessageForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.name = current_user
+            post.save()
+        return redirect('home')
+
+    else:
+        form = NewMessageForm()
+    return render(request, 'hood/new_message.html', {"form": form})
