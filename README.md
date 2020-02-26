@@ -49,7 +49,9 @@ Here is a run through of how to set up the application:
 
 ## Known Bugs
 * it shows posts for every neighbourhood
-* doesnt have an admin page
+* cannot edit profile page
+* cannot show emergency services,working on that oage
+* working on health ,police services templates
 
 
 ## Support and contact details
@@ -57,7 +59,7 @@ You can provide feedback or raise any issues/ bugs through the following means:
 * ngugitrevor@gmail.com
 
 ## Live Site link
-You can view the live application by following this [link](https://.herokuapp.com/).
+You can view the live application by following this [link](https://mugoya-watch.herokuapp.com/accounts/login/?next=//).
 
 
 ## License
