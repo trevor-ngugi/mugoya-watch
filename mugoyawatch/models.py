@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Neighbourhood(models.Model):
@@ -50,7 +51,7 @@ class Posts(models.Model):
     message=models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)
     #message_image = models.ImageField(upload_to = 'posts/')
-    #name=models.ForeignKey(User,on_delete=models.CASCADE)
+    name=models.ForeignKey(User,on_delete=models.CASCADE)
 
     @classmethod
     def show_posts(cls):
