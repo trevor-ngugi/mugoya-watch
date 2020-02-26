@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mugoyawatch.apps.MugoyawatchConfig',
     'bootstrap3',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
