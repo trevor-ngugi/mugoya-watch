@@ -3,14 +3,14 @@
 {% block content %}
 {{block.super}}
 
-<h1>home page for mugoya watch</h1>
+
 {%for post in posts%}
     <h2>
     {% autoescape on %}
-     {{post.message| safe}}
+     message:{{post.message| safe}}
     {% endautoescape %}
 </h2>
-    <h2>{{post.pub_date}}</h2>
+    <h2>posted at :{{post.pub_date}}</h2>
     <!-- <img src="{{post.message_image.url}}" class="img-responsive" alt="Image">   will add functionality of if -->
 {%endfor%}
 {% endblock %}
