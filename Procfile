@@ -1,0 +1,1 @@
+web: gunicorn mugoya.wsgi --log-file -
