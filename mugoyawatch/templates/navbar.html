@@ -21,6 +21,9 @@
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
+              <a class="nav-link" href="/accounts/profile">profile</a>
+            </li>
+          <li class="nav-item">
             <a class="nav-link" href="{%url 'new_message'%}">add post</a>
           </li>
           <li class="nav-item">

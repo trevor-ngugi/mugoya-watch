@@ -42,3 +42,9 @@ def new_message(request):
     else:
         form = NewMessageForm()
     return render(request, 'hood/new_message.html', {"form": form})
+
+@login_required(login_url='/accounts/login/')
+def profile(request):
+    current_user = request.user
+    profile=Profile.objects.filter(user=current_user).all()
+    return render(request,"registration/profile.html",{'profile':profile})
